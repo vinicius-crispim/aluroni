@@ -5,7 +5,7 @@ import { useState } from 'react';
 import Filtros from './Filtros';
 import Ordenador from './Ordenador';
 import Itens from './Itens';
-import React  from 'react';
+import React from 'react';
 
 
 export default function Cardapio() {
