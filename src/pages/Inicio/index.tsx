@@ -1,5 +1,6 @@
 import cardapio from 'data/cardapio.json';
 import styles from './Inicio.module.scss';
+import Menu from 'components/Menu';
 
 export default function Inicio() {
   let pratosRecomendados = [...cardapio];
@@ -7,6 +8,7 @@ export default function Inicio() {
   pratosRecomendados = pratosRecomendados.sort(() => 0.5 - Math.random()).splice(0, 3);
   return (
     <section>
+      <Menu/>
       <h3 className={styles.titulo}>Recomendações da Cozinha</h3>
       <div className={styles.recomendados}>
         {pratosRecomendados.map(prato => (
