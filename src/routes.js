@@ -1,11 +1,12 @@
 import Footer from 'components/Footer';
 import Menu from 'components/Menu';
-import NotFound from 'components/NotFound';
+import NotFound from 'pages/NotFound';
 import PaginaPadrao from 'components/PaginaPadrao';
 import Cardapio from 'pages/Cardapio';
 import Inicio from 'pages/Inicio';
 import Sobre from 'pages/Sobre';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Prato from 'pages/Prato';
 
 export default function AppRouter() {
   return (
@@ -18,6 +19,7 @@ export default function AppRouter() {
             <Route path="cardapio" element={<Cardapio />} />
             <Route path='sobre-nos' element={<Sobre />} />
           </Route>
+          <Route path='prato/:id' element={<Prato/>}/>
           <Route path='*' element={<NotFound />} />
         </Routes>
         <Footer />
