@@ -3,14 +3,14 @@ import styles from './Inicio.module.scss';
 import stylesTema from 'styles/Tema.module.scss';
 import nossaCasaFoto from 'assets/nossa_casa.png';
 import { useNavigate } from 'react-router-dom';
-import Prato from '../Prato/index';
+import { Prato } from 'types/Prato';
 
 export default function Inicio() {
   let pratosRecomendados = [...cardapio];
   //Pega itens da lista (pratos) de maneira randomizada
   pratosRecomendados = pratosRecomendados.sort(() => 0.5 - Math.random()).splice(0, 3);
   const navigate = useNavigate();
-  function redirecionaVerMaisPrato(prato: typeof cardapio[0]){
+  function redirecionaVerMaisPrato(prato: Prato){
     navigate(`/prato/${prato.id}`, {state: {prato}});
   }
 
